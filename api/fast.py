@@ -64,7 +64,7 @@ def predict(pickup_datetime,        # 2013-07-06 17:18:00
         passenger_count=[int(passenger_count)]))
 
     # ⚠️ TODO: get model from GCP
-    client = storage.Client().bucket(BUCKET_NAME)
+    """ client = storage.Client().bucket(BUCKET_NAME)
     model_directory="v2"
 
     storage_location = 'models/{}/{}/{}'.format(
@@ -73,10 +73,10 @@ def predict(pickup_datetime,        # 2013-07-06 17:18:00
         'model.joblib')
     blob = client.blob(storage_location)
     blob.download_to_filename('model.joblib')
-    pipeline = joblib.load('model.joblib')
+    pipeline = joblib.load('model.joblib') """
 
     # pipeline = get_model_from_gcp()
-    # pipeline = joblib.load('model.joblib')
+    pipeline = joblib.load('model.joblib')
 
     # make prediction
     results = pipeline.predict(X)

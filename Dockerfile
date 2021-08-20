@@ -4,6 +4,7 @@ COPY api /api
 COPY TaxiFareModel /TaxiFareModel
 COPY model.joblib /model.joblib
 COPY requirements.txt /requirements.txt
+COPY gcp/bootcamp-662-juliend-b6b4a2a694eb.json /credentials.json
 
 RUN pip install -r requirements.txt
 
